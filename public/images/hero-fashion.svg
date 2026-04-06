@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1200">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#c88b56"/>
+      <stop offset="100%" stop-color="#2a1f1a"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" x2="1">
+      <stop offset="0%" stop-color="#f4e7d4"/>
+      <stop offset="100%" stop-color="#dcb98a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="1200" fill="url(#bg)"/>
+  <circle cx="180" cy="180" r="120" fill="#ffffff" fill-opacity="0.12"/>
+  <circle cx="870" cy="260" r="150" fill="#ffffff" fill-opacity="0.08"/>
+  <rect x="405" y="120" width="190" height="750" rx="30" fill="url(#panel)"/>
+  <path d="M430 120h140l90 150H340z" fill="#a96b3a"/>
+  <path d="M500 200v520" stroke="#7a4d29" stroke-width="8" stroke-linecap="round" stroke-dasharray="1 38"/>
+  <rect x="150" y="720" width="280" height="300" rx="36" fill="#ffffff" fill-opacity="0.14"/>
+  <rect x="520" y="820" width="320" height="250" rx="36" fill="#ffffff" fill-opacity="0.14"/>
+  <text x="290" y="840" font-family="Georgia, serif" font-size="54" fill="#fff6ea">New Arrival</text>
+  <text x="290" y="900" font-family="Arial, sans-serif" font-size="28" fill="#fff6ea">Wedding-ready looks with rich textures</text>
+  <text x="680" y="940" text-anchor="middle" font-family="Georgia, serif" font-size="44" fill="#fff6ea">Shahi</text>
+  <text x="680" y="990" text-anchor="middle" font-family="Georgia, serif" font-size="44" fill="#fff6ea">Vastram</text>
+</svg>

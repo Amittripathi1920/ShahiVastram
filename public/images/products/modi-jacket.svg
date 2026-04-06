@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f3ead8"/>
+      <stop offset="100%" stop-color="#cfb183"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1200" fill="url(#bg)"/>
+  <rect x="275" y="240" width="350" height="520" rx="30" fill="#b88441"/>
+  <path d="M360 240h180v195H360z" fill="#8e6331"/>
+  <path d="M450 300v360" stroke="#f1e1c7" stroke-width="7" stroke-linecap="round" stroke-dasharray="1 32"/>
+  <circle cx="450" cy="470" r="10" fill="#f1e1c7"/>
+  <text x="450" y="1080" text-anchor="middle" font-family="Georgia, serif" font-size="52" fill="#7a552b">MODI JACKET</text>
+</svg>

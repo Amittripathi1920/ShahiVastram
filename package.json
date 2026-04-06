@@ -1,0 +1,45 @@
+{
+  "name": "shahi-vastram",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "clean": "node -e \"require('fs').rmSync('.next', { recursive: true, force: true })\"",
+    "dev": "next dev",
+    "prebuild": "npm run clean",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit -p tsconfig.typecheck.json"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.9.1",
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@supabase/supabase-js": "^2.49.4",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "jose": "^5.9.6",
+    "lucide-react": "^0.454.0",
+    "next": "^15.2.0",
+    "next-themes": "^0.4.4",
+    "psql": "^0.0.1",
+    "razorpay": "^2.9.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.54.1",
+    "tailwind-merge": "^2.5.5",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.17.0",
+    "eslint-config-next": "^15.2.0",
+    "postcss": "^8.4.49",
+    "supabase": "^2.84.10",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2"
+  }
+}

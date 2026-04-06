@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#eef5e8"/>
+      <stop offset="100%" stop-color="#8aaf88"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1200" fill="url(#bg)"/>
+  <rect x="320" y="150" width="260" height="760" rx="28" fill="#447158"/>
+  <path d="M390 150h120l95 135H295z" fill="#65957b"/>
+  <path d="M450 220v480" stroke="#dce7da" stroke-width="8" stroke-linecap="round" stroke-dasharray="1 35"/>
+  <path d="M415 220h70v220h-70z" fill="#dce7da" fill-opacity="0.88"/>
+  <text x="450" y="1080" text-anchor="middle" font-family="Georgia, serif" font-size="54" fill="#305442">KURTA PAJAMA</text>
+</svg>

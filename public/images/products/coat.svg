@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f4eadb"/>
+      <stop offset="100%" stop-color="#dcc1a0"/>
+    </linearGradient>
+    <linearGradient id="coat" x1="0" x2="1">
+      <stop offset="0%" stop-color="#5d3115"/>
+      <stop offset="100%" stop-color="#8e5630"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1200" fill="url(#bg)"/>
+  <circle cx="690" cy="180" r="120" fill="#ffffff" fill-opacity="0.32"/>
+  <path d="M280 150h340l70 140-120 96v560H330V386l-120-96z" fill="url(#coat)"/>
+  <path d="M370 150h160v170l85 110H285l85-110z" fill="#a4683d"/>
+  <path d="M450 240v706" stroke="#e9d6bf" stroke-width="8" stroke-linecap="round" stroke-dasharray="1 40"/>
+  <path d="M330 420l120 120 120-120" fill="none" stroke="#e9d6bf" stroke-width="8" stroke-linecap="round"/>
+  <text x="450" y="1080" text-anchor="middle" font-family="Georgia, serif" font-size="58" fill="#5d3115">REGAL COAT</text>
+</svg>
