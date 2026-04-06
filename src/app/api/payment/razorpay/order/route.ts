@@ -40,7 +40,7 @@ export async function POST(request: Request) {
     postal_code: parsed.data.customer.postalCode,
     status: "Pending",
     payment_status: "pending",
-    order_status: "pending", // ✅ added
+    // order_status: "pending", // ✅ added
     payment_provider: "razorpay",
     payment_reference: razorpayOrder.id,
     total_amount: totalAmount,
