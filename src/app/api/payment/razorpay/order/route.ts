@@ -3,11 +3,12 @@ import Razorpay from "razorpay";
 import { NextResponse } from "next/server";
 
 import { createOrder } from "@/lib/services/orders";
-import { env, hasRazorpayConfig } from "@/lib/env";
+import { clientEnv } from "@/lib/env.client";
+import { serverEnv } from "@/lib/env.server";
 import { checkoutSchema } from "@/lib/validations";
 
 export async function POST(request: Request) {
-  if (!hasRazorpayConfig()) {
+  if (!clientEnv.razorpayKeyId || !serverEnv.razorpayKeySecret) {
     return NextResponse.json({ error: "Razorpay is not configured." }, { status: 400 });
   }
 
@@ -18,7 +19,12 @@ export async function POST(request: Request) {
   }
 
   const totalAmount = parsed.data.items.reduce((sum, item) => sum + item.quantity * item.price, 0);
-  const razorpay = new Razorpay({ key_id: env.razorpayKeyId, key_secret: env.razorpayKeySecret });
+
+  const razorpay = new Razorpay({
+    key_id: clientEnv.razorpayKeyId,
+    key_secret: serverEnv.razorpayKeySecret
+  });
+
   const razorpayOrder = await razorpay.orders.create({
     amount: totalAmount * 100,
     currency: "INR",
@@ -34,6 +40,7 @@ export async function POST(request: Request) {
     postal_code: parsed.data.customer.postalCode,
     status: "Pending",
     payment_status: "pending",
+    order_status: "pending", // ✅ added
     payment_provider: "razorpay",
     payment_reference: razorpayOrder.id,
     total_amount: totalAmount,

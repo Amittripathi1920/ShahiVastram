@@ -2,7 +2,7 @@ import { createHash } from "crypto";
 import { SignJWT, jwtVerify, type JWTPayload } from "jose";
 import { cookies } from "next/headers";
 
-import { env } from "@/lib/env";
+import { serverEnv, env } from "@/lib/env";
 import { type AppSession } from "@/lib/types";
 
 const secret = new TextEncoder().encode(env.adminJwtSecret);
@@ -15,7 +15,7 @@ export function hashPassword(value: string) {
 export async function createSessionToken(session: AppSession) {
   const payload: JWTPayload = {
     email: session.email,
-    role: session.role
+    role: session.role,
   };
 
   return new SignJWT(payload)
@@ -37,7 +37,7 @@ export async function verifySessionToken(token: string) {
 
     return {
       email: result.payload.email,
-      role: result.payload.role
+      role: result.payload.role,
     } as AppSession;
   } catch {
     return null;
@@ -66,7 +66,7 @@ export function authCookieOptions() {
     secure: process.env.NODE_ENV === "production",
     sameSite: "lax" as const,
     path: "/",
-    maxAge: 60 * 60 * 24 * 7
+    maxAge: 60 * 60 * 24 * 7,
   };
 }
 

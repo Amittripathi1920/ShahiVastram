@@ -13,7 +13,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { env } from "@/lib/env";
+import { serverEnv, env } from "@/lib/env";
 import { formatCurrency } from "@/lib/formatters";
 import { checkoutSchema } from "@/lib/validations";
 
