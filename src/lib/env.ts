@@ -3,6 +3,7 @@ export const env = {
   supabaseUrl: process.env.NEXT_PUBLIC_SUPABASE_URL,
   supabaseAnonKey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
   razorpayKeyId: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID
+  adminJwtSecret: process.env.ADMIN_JWT_SECRET ?? "change-me-in-env",
 };
 
 export const serverEnv = {
