@@ -46,7 +46,6 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
                 <Link href="/products">Back to Products</Link>
               </Button>
             </div>
-            <div className="relative overflow-hidden rounded-[1.5rem] border border-white/15 bg-white/10 p-2 backdrop-blur">
             <div className="rounded-3xl bg-secondary/70 p-5 text-sm text-muted-foreground">
               Stock available: <span className="font-semibold text-foreground">{product.stock}</span>
             </div>
