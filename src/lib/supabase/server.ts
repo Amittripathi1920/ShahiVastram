@@ -1,13 +1,13 @@
 import { createClient } from "@supabase/supabase-js";
-
-import { env, hasServiceRole, hasSupabaseConfig } from "@/lib/env";
+import { clientEnv } from "@/lib/env.client";
+import { serverEnv } from "@/lib/env.server";
 
 export function createSupabaseServerClient() {
-  if (!hasSupabaseConfig()) {
+  if (!clientEnv.supabaseUrl || !clientEnv.supabaseAnonKey) {
     return null;
   }
 
-  return createClient(env.supabaseUrl, env.supabaseAnonKey, {
+  return createClient(clientEnv.supabaseUrl, clientEnv.supabaseAnonKey, {
     auth: {
       persistSession: false
     }
@@ -15,11 +15,11 @@ export function createSupabaseServerClient() {
 }
 
 export function createSupabaseAdminClient() {
-  if (!hasServiceRole()) {
+  if (!clientEnv.supabaseUrl || !serverEnv.supabaseServiceRoleKey) {
     return null;
   }
 
-  return createClient(env.supabaseUrl, env.supabaseServiceRoleKey, {
+  return createClient(clientEnv.supabaseUrl, serverEnv.supabaseServiceRoleKey, {
     auth: {
       persistSession: false
     }

@@ -1,13 +1,12 @@
 import { createClient } from "@supabase/supabase-js";
-
-import { env, hasSupabaseConfig } from "@/lib/env";
+import { clientEnv } from "@/lib/env.client";
 
 export function createSupabaseBrowserClient() {
-  if (!hasSupabaseConfig()) {
+  if (!clientEnv.supabaseUrl || !clientEnv.supabaseAnonKey) {
     return null;
   }
 
-  return createClient(env.supabaseUrl, env.supabaseAnonKey, {
+  return createClient(clientEnv.supabaseUrl, clientEnv.supabaseAnonKey, {
     auth: {
       persistSession: false
     }
