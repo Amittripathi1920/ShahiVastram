@@ -65,9 +65,8 @@ export interface Order {
   city: string;
   state: string;
   postal_code: string;
-  status: OrderStatus;
-  payment_status: "pending" | "paid";
-  order_status: "pending" | "paid";
+  status: OrderStatus; // ✅ correct
+  payment_status: "pending" | "paid"; // ✅ correct
   payment_provider: "razorpay" | "cod";
   payment_reference?: string | null;
   total_amount: number;
